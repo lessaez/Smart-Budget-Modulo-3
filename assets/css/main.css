@@ -7,6 +7,7 @@
  * Copyright 2011-2022 Twitter, Inc.
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -272,7 +273,10 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-  -webkit-appearance: button;
+.btn-hero {
+  -webkit-appearance: none;
+  appearance: none;
+}
 }
 
 button:not(:disabled),
@@ -331,7 +335,10 @@ progress {
 
 [type=search] {
   outline-offset: -2px;
+.btn-hero {
   -webkit-appearance: none;
+  appearance: none;
+}
 }
 
 [type=search]::-webkit-search-decoration {
@@ -4181,14 +4188,12 @@ input[type=button].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-webkit-slider-thumb {
     transition: none;
   }
-}
-.custom-range::-webkit-slider-thumb {
-  appearance: none;
 }
 .custom-range::-webkit-slider-thumb:active {
   background-color: rgb(178.5, 215.4, 255);
@@ -4209,14 +4214,12 @@ input[type=button].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-moz-range-thumb {
     transition: none;
   }
-}
-.custom-range::-moz-range-thumb {
-  appearance: none;
 }
 .custom-range::-moz-range-thumb:active {
   background-color: rgb(178.5, 215.4, 255);
@@ -4240,14 +4243,12 @@ input[type=button].btn-block {
   border: 0;
   border-radius: 1rem;
   transition: background-color 0.15s ease-in-out, border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+  appearance: none;
 }
 @media (prefers-reduced-motion: reduce) {
   .custom-range::-ms-thumb {
     transition: none;
   }
-}
-.custom-range::-ms-thumb {
-  appearance: none;
 }
 .custom-range::-ms-thumb:active {
   background-color: rgb(178.5, 215.4, 255);
@@ -4648,6 +4649,10 @@ input[type=button].btn-block {
     display: none;
   }
 }
+.navbar-expand {
+  flex-flow: row nowrap;
+  justify-content: flex-start;
+}
 .navbar-expand > .container,
 .navbar-expand > .container-fluid,
 .navbar-expand > .container-sm,
@@ -4656,10 +4661,6 @@ input[type=button].btn-block {
 .navbar-expand > .container-xl {
   padding-right: 0;
   padding-left: 0;
-}
-.navbar-expand {
-  flex-flow: row nowrap;
-  justify-content: flex-start;
 }
 .navbar-expand .navbar-nav {
   flex-direction: row;
@@ -6139,14 +6140,12 @@ a.close.disabled {
 }
 .modal.fade .modal-dialog {
   transition: transform 0.3s ease-out;
+  transform: translate(0, -50px);
 }
 @media (prefers-reduced-motion: reduce) {
   .modal.fade .modal-dialog {
     transition: none;
   }
-}
-.modal.fade .modal-dialog {
-  transform: translate(0, -50px);
 }
 .modal.show .modal-dialog {
   transform: none;
@@ -10335,4 +10334,15 @@ a.text-brand-gray:hover, a.text-brand-gray:focus {
   bottom: 0;
 }
 
-/*# sourceMappingURL=main.css.map */
+.icon-doc {
+  font-size: 35px;
+  color: #1ccfc9;
+}
+
+.btn-hero {
+  margin-bottom: 40px; /* separa botón de la imagen */
+}
+
+.hero__img-wrapper {
+  margin-top: 40px;
+}
