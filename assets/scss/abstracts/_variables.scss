@@ -1,0 +1,18 @@
+// Mapa de colores de Smart Budget
+
+$sb-colores: (
+  "brand-purple": #6B4EFF,
+  "brand-yellow": #FFC83D,
+  "brand-green": #2EC4B6,
+  "brand-blue": #4D96FF,
+  "brand-violet": #8B5CF6,
+  "brand-lavender": #F2EEFF,
+  "brand-dark": #2B2B2B,
+  "brand-gray": #6B7280
+);
+
+
+// Fuente principal SmartBudget
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700;800&display=swap');
+$sb-font: "Montserrat", sans-serif;
+
