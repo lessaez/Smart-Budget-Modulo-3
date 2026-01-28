@@ -1,0 +1,9 @@
+/* Fix warning vendorPrefix: appearance */
+button,
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}

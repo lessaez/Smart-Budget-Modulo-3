@@ -6,6 +6,7 @@
     "sass": "^1.0.0"
   },
   "scripts": {
-    "sass:watch": "sass assets/scss/main.scss assets/css/main.css --watch --style=expanded"
+    "sass:watch": "sass assets/scss/main.scss assets/css/main.css --watch --style=expanded",
+    "sass:build": "sass assets/scss/main.scss assets/css/main.css --style=expanded"
   }
 }

@@ -1,0 +1,75 @@
+/* Componente: Card (Features) */
+
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(108, 76, 241, 0.10);
+  border-radius: 20px;
+  padding: 28px 26px;
+  height: 100%;
+  min-height: 360px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  transition: transform .18s ease, box-shadow .18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+}
+
+/* Icono */
+.card__icon {
+  display: inline-block;
+  font-size: 28px;
+  color: #1ccfc9;
+  margin-bottom: 22px;
+}
+
+/* Variantes de color */
+.card__icon--yellow {
+  color: #ffc83d;
+}
+
+.card__icon--purple {
+  color: #6c4cf1;
+}
+
+.card__icon--indigo {
+  color: #544ec5;
+}
+
+/* Textos */
+.card__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #2e2e2e;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.card__lead {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(46, 46, 46, 0.78);
+  margin-bottom: 10px;
+}
+
+.card__text {
+  margin: 6px 0 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: rgba(46, 46, 46, 0.78);
+}
+
+.card__title,
+.card__lead,
+.card__text {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.card {
+  min-height: 360px;
+}

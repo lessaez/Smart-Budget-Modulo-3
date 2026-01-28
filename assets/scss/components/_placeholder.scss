@@ -1,0 +1,18 @@
+/* Secciones en construcción */
+
+.section-placeholder {
+  background-color: #ffffff;
+
+  &__title {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-bottom: 12px;
+    color: #2e2e2e;
+  }
+
+  &__text {
+    font-size: 1.1rem;
+    color: rgba(46, 46, 46, 0.65);
+    margin: 0;
+  }
+}

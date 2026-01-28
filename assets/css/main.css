@@ -8,6 +8,7 @@
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/main/LICENSE)
  */
 @import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.13.1/font/bootstrap-icons.min.css");
 :root {
   --blue: #007bff;
   --indigo: #6610f2;
@@ -273,10 +274,7 @@ button,
 [type=button],
 [type=reset],
 [type=submit] {
-.btn-hero {
-  -webkit-appearance: none;
-  appearance: none;
-}
+  -webkit-appearance: button;
 }
 
 button:not(:disabled),
@@ -335,10 +333,7 @@ progress {
 
 [type=search] {
   outline-offset: -2px;
-.btn-hero {
   -webkit-appearance: none;
-  appearance: none;
-}
 }
 
 [type=search]::-webkit-search-decoration {
@@ -10328,60 +10323,163 @@ a.text-brand-gray:hover, a.text-brand-gray:focus {
     border-color: #dee2e6;
   }
 }
-.hero.__img {
-  width: 100%;
-  position: relative;
-  bottom: 0;
+/* Fix warning vendorPrefix: appearance */
+button,
+input,
+select,
+textarea {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
 }
 
-.icon-doc {
-  font-size: 35px;
-  color: #1ccfc9;
-}
-
-.btn-hero {
-  margin-bottom: 40px; /* separa botón de la imagen */
-}
-
-.hero__img-wrapper {
-  margin-top: 40px;
-}
-
-.features{
-  background: rgba(230, 225, 255, 0.35); /* lila suave */
-}
-
-.feature-card{
-  background: #fff;
-  border: 1px solid rgba(108, 76, 241, 0.12);
-  border-radius: 16px;
-  padding: 16px 16px 14px;
-  box-shadow: 0 6px 18px rgba(0,0,0,0.04);
-  height: 100%;
-}
-
-.feature-head{
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-bottom: 8px;
-}
-
-.feature-icon{
-  font-size: 28px;
-  color: #1ccfc9; /* turquesa similar al prototipo */
-}
-
-.feature-title{
+.footer__list {
+  list-style: none !important;
+  padding-left: 0 !important;
   margin: 0;
+}
+.footer__list li {
+  list-style: none !important;
+  margin-bottom: 10px;
+}
+.footer__list li::marker {
+  content: none;
+}
+.footer__link {
+  color: rgba(46, 46, 46, 0.75);
+  font-size: 0.95rem;
+  text-decoration: none;
+}
+.footer__link:hover {
+  color: #6c4cf1;
+  text-decoration: none;
+}
+
+.features {
+  background: rgba(230, 225, 255, 0.35);
+}
+
+.hero__title {
+  font-weight: 800;
+  font-size: 2.8rem;
+  line-height: 1.1;
+  margin-bottom: 16px;
+  color: #3b2a7a;
+}
+.hero__subtitle {
+  font-size: 1.05rem;
+  color: rgba(46, 46, 46, 0.75);
+  max-width: 420px;
+  margin-bottom: 24px;
+}
+.hero__actions {
+  display: flex;
+  justify-content: center;
+}
+.hero__img-wrapper {
+  display: flex;
+  justify-content: center;
+}
+.hero__img {
+  width: 100%;
+  max-width: 520px;
+  border-radius: 16px;
+  box-shadow: 0 20px 45px rgba(0, 0, 0, 0.15);
+}
+
+/* Desktop */
+@media (min-width: 992px) {
+  .hero__actions {
+    justify-content: flex-start;
+  }
+}
+/* Componente: Card (Features) */
+.card {
+  background-color: #ffffff;
+  border: 1px solid rgba(108, 76, 241, 0.1);
+  border-radius: 20px;
+  padding: 28px 26px;
+  height: 100%;
+  min-height: 360px;
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.05);
+  transition: transform 0.18s ease, box-shadow 0.18s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 18px 36px rgba(0, 0, 0, 0.09);
+}
+
+/* Icono */
+.card__icon {
+  display: inline-block;
+  font-size: 28px;
+  color: #1ccfc9;
+  margin-bottom: 22px;
+}
+
+/* Variantes de color */
+.card__icon--yellow {
+  color: #ffc83d;
+}
+
+.card__icon--purple {
+  color: #6c4cf1;
+}
+
+.card__icon--indigo {
+  color: #544ec5;
+}
+
+/* Textos */
+.card__title {
+  font-size: 1.45rem;
+  font-weight: 800;
+  margin: 0 0 6px;
+  color: #2e2e2e;
+  line-height: 1.15;
+  margin-bottom: 10px;
+}
+
+.card__lead {
+  margin: 0;
+  font-size: 1.15rem;
+  font-weight: 400;
+  color: rgba(46, 46, 46, 0.78);
+  margin-bottom: 10px;
+}
+
+.card__text {
+  margin: 6px 0 0;
+  font-size: 1.15rem;
+  line-height: 1.35;
+  color: rgba(46, 46, 46, 0.78);
+}
+
+.card__title,
+.card__lead,
+.card__text {
+  word-break: normal;
+  overflow-wrap: normal;
+  hyphens: none;
+}
+
+.card {
+  min-height: 360px;
+}
+
+/* Secciones en construcción */
+.section-placeholder {
+  background-color: #ffffff;
+}
+.section-placeholder__title {
+  font-size: 2rem;
   font-weight: 700;
-  font-size: 1rem;
+  margin-bottom: 12px;
   color: #2e2e2e;
 }
-
-.feature-text{
+.section-placeholder__text {
+  font-size: 1.1rem;
+  color: rgba(46, 46, 46, 0.65);
   margin: 0;
-  font-size: 0.9rem;
-  color: rgba(46,46,46,0.75);
-  line-height: 1.35;
 }
